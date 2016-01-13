@@ -14,6 +14,7 @@
 		65C028211C45D01000572171 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C0281F1C45D01000572171 /* LaunchScreen.storyboard */; };
 		65C0282C1C45D01100572171 /* SwiftErWeiMaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0282B1C45D01100572171 /* SwiftErWeiMaTests.swift */; };
 		65C028371C45D01100572171 /* SwiftErWeiMaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C028361C45D01100572171 /* SwiftErWeiMaUITests.swift */; };
+		65C0286F1C45E3D700572171 /* JXErWeiMaImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C0286D1C45E3D700572171 /* JXErWeiMaImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		65C028321C45D01100572171 /* SwiftErWeiMaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftErWeiMaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C028361C45D01100572171 /* SwiftErWeiMaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftErWeiMaUITests.swift; sourceTree = "<group>"; };
 		65C028381C45D01100572171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65C0286C1C45E3D700572171 /* JXErWeiMaImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXErWeiMaImage.h; sourceTree = "<group>"; };
+		65C0286D1C45E3D700572171 /* JXErWeiMaImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXErWeiMaImage.m; sourceTree = "<group>"; };
+		65C028701C45E42600572171 /* SwiftErWeiMa-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftErWeiMa-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				65C028161C45D01000572171 /* AppDelegate.swift */,
 				65C028181C45D01000572171 /* ViewController.swift */,
+				65C0286B1C45E3D700572171 /* JXErWeiMaImage */,
 				65C0281A1C45D01000572171 /* Main.storyboard */,
 				65C0281D1C45D01000572171 /* Assets.xcassets */,
 				65C0281F1C45D01000572171 /* LaunchScreen.storyboard */,
@@ -123,6 +128,16 @@
 				65C028381C45D01100572171 /* Info.plist */,
 			);
 			path = SwiftErWeiMaUITests;
+			sourceTree = "<group>";
+		};
+		65C0286B1C45E3D700572171 /* JXErWeiMaImage */ = {
+			isa = PBXGroup;
+			children = (
+				65C028701C45E42600572171 /* SwiftErWeiMa-Bridging-Header.h */,
+				65C0286C1C45E3D700572171 /* JXErWeiMaImage.h */,
+				65C0286D1C45E3D700572171 /* JXErWeiMaImage.m */,
+			);
+			path = JXErWeiMaImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65C0286F1C45E3D700572171 /* JXErWeiMaImage.m in Sources */,
 				65C028191C45D01000572171 /* ViewController.swift in Sources */,
 				65C028171C45D01000572171 /* AppDelegate.swift in Sources */,
 			);
@@ -397,10 +413,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftErWeiMa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bs1369.SwiftErWeiMa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftErWeiMa/JXErWeiMaImage/SwiftErWeiMa-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -408,10 +427,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftErWeiMa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bs1369.SwiftErWeiMa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftErWeiMa/JXErWeiMaImage/SwiftErWeiMa-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -482,6 +503,7 @@
 				65C0283D1C45D01100572171 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65C0283E1C45D01100572171 /* Build configuration list for PBXNativeTarget "SwiftErWeiMaTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +512,7 @@
 				65C028401C45D01100572171 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65C028411C45D01100572171 /* Build configuration list for PBXNativeTarget "SwiftErWeiMaUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +521,7 @@
 				65C028431C45D01100572171 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
